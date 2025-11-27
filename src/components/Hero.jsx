@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Hero.css';
-import heroBg from '../assets/hero-bg.jpg';
+import heroBg from '../assets/family-home.jpg';
 
 const Hero = () => {
   const heroRef = useRef(null);
   const [parallaxY, setParallaxY] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,12 @@ const Hero = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = heroBg;
+    img.onload = () => setImageLoaded(true);
   }, []);
 
   return (
@@ -78,7 +85,7 @@ const Hero = () => {
 
       {/* Background parallax image */}
       <div
-        className="hero-parallax"
+        className={`hero-parallax ${imageLoaded ? 'loaded' : ''}`}
         style={{
           transform: `translateY(${parallaxY}px)`,
           backgroundImage: `url(${heroBg})`
