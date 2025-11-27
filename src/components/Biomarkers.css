@@ -1,0 +1,289 @@
+.biomarkers {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-white);
+}
+
+.biomarkers-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.biomarkers-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Header Row */
+.biomarkers-header-row {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.biomarkers-header-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: var(--spacing-xl);
+}
+
+.biomarkers-description-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.biomarkers-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  color: var(--color-black);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.biomarkers-description {
+  max-width: 450px;
+}
+
+.description-bold {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-black);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.description-regular {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* Toggle Tabs */
+.biomarkers-toggle-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.biomarkers-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  padding: 4px;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-full);
+}
+
+.toggle-item {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.toggle-item:hover {
+  color: var(--color-black);
+}
+
+.toggle-item.active {
+  color: var(--color-black);
+  background: var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.toggle-item label {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.toggle-highlight {
+  display: none;
+}
+
+/* Carousel */
+.biomarkers-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-viewport {
+  display: flex;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: var(--spacing-md);
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  flex: 0 0 calc(50% - var(--spacing-md));
+  min-width: calc(50% - var(--spacing-md));
+  scroll-snap-align: start;
+}
+
+.carousel-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--color-bg-cream);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 400px;
+}
+
+.carousel-content {
+  padding: var(--spacing-xl);
+  display: flex;
+}
+
+.vital-areas-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-black);
+  letter-spacing: -0.02em;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.card-tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .biomarkers-header-col,
+  .biomarkers-description-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  .biomarkers-header-col {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .biomarkers-description {
+    max-width: 100%;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(80% - var(--spacing-md));
+    min-width: calc(80% - var(--spacing-md));
+  }
+}
+
+@media (max-width: 768px) {
+  .biomarkers {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .biomarkers-grid {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .biomarkers-title {
+    font-size: 2rem;
+  }
+
+  .biomarkers-toggle {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .biomarkers-toggle::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toggle-item {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.8125rem;
+  }
+
+  .carousel-item {
+    flex: 0 0 calc(90% - var(--spacing-sm));
+    min-width: calc(90% - var(--spacing-sm));
+  }
+
+  .carousel-slide {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .carousel-content {
+    padding: var(--spacing-lg);
+  }
+
+  .carousel-image {
+    height: 200px;
+    order: -1;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
