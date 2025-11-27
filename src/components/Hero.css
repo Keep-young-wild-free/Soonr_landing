@@ -81,7 +81,7 @@
 
 .hero-line-wrapper:nth-child(2) .hero-line {
   animation-delay: 0.1s;
-  font-size: 2rem;
+  font-size: clamp(1rem, 3vw, 2rem);
   font-weight: 400;
   opacity: 0.8;
   margin-top: var(--spacing-md);
