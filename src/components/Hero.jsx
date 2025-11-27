@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Hero.css';
+import heroBg from '../assets/hero-bg.jpg';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -31,10 +32,10 @@ const Hero = () => {
                 <header className="hero-header">
                   <h2 className="hero-title">
                     <div className="hero-line-wrapper">
-                      <div className="hero-line">Better health</div>
+                      <div className="hero-line">Get there together, sooner</div>
                     </div>
                     <div className="hero-line-wrapper">
-                      <div className="hero-line">starts with Labs</div>
+                      <div className="hero-line">AI-powered preconception coaching for both partners. Evidence-based & personalized.</div>
                     </div>
                   </h2>
                 </header>
@@ -78,7 +79,10 @@ const Hero = () => {
       {/* Background parallax image */}
       <div
         className="hero-parallax"
-        style={{ transform: `translateY(${parallaxY}px)` }}
+        style={{
+          transform: `translateY(${parallaxY}px)`,
+          backgroundImage: `url(${heroBg})`
+        }}
       ></div>
     </section>
   );

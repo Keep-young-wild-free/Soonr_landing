@@ -54,17 +54,17 @@
 @media (max-width: 768px) {
   .floating-cta {
     bottom: var(--spacing-sm);
-    left: var(--spacing-sm);
-    right: var(--spacing-sm);
-    transform: translateX(0) translateY(100px);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) translateY(100px);
   }
 
   .floating-cta.visible {
-    transform: translateX(0) translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 
   .floating-cta-btn {
-    width: 100%;
     justify-content: center;
+    white-space: nowrap;
   }
 }
