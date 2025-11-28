@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ChromeNav from './components/ChromeNav';
+import Snapshot from './components/Snapshot';
 import HowItWorks from './components/HowItWorks';
 import Biomarkers from './components/Biomarkers';
 import Plans from './components/Plans';
@@ -17,6 +18,7 @@ function App() {
       <ChromeNav />
       <main>
         <Hero />
+        <Snapshot />
         <HowItWorks />
         <Biomarkers />
         <Plans />
@@ -29,3 +31,4 @@ function App() {
 }
 
 export default App;
+

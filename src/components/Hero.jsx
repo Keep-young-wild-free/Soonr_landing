@@ -28,7 +28,7 @@ const Hero = () => {
     <section
       ref={heroRef}
       className="hero"
-      data-hero="true"
+      data-hero="tru1e"
       style={{ '--y-parallax': `${parallaxY}px` }}
     >
       <div className="hero-grid">
@@ -96,3 +96,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

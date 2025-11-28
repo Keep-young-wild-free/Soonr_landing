@@ -54,13 +54,13 @@
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 400;
   color: var(--color-white);
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: -0.03em;
   margin: 0;
 }
 
 .hero-line-wrapper {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-line {
@@ -246,3 +246,4 @@
     padding: var(--spacing-md) var(--spacing-lg);
   }
 }
+

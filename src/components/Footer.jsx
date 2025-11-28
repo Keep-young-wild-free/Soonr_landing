@@ -28,9 +28,10 @@ const Footer = () => {
     connect: {
       title: 'Connect',
       links: [
-        { name: 'Instagram (@soonr)', href: 'https://instagram.com/soonr' },
-        { name: 'Twitter / X (@soonr)', href: 'https://x.com/soonr' },
-        { name: 'LinkedIn (@soonr)', href: 'https://linkedin.com/company/soonr' },
+        { name: 'Instagram', href: 'https://www.instagram.com/soonr.health/' },
+        { name: 'X (Twitter)', href: 'https://x.com/Soonr_health' },
+        { name: 'Threads', href: 'https://www.threads.com/@soonr.health' },
+        { name: 'LinkedIn', href: 'https://www.linkedin.com/in/soonr-health-244308392/' },
         { name: 'Email: soonr@vespexx.com', href: 'mailto:soonr@vespexx.com' }
       ]
     }

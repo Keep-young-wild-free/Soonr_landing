@@ -48,17 +48,10 @@ const FAQ = () => {
             <div className="faq-header">
               <header className="faq-header-wrapper">
                 <h2 className="faq-title">
-                  <div className="title-line">Frequently asked</div>
-                  <div className="title-line"><span className="text-highlight">questions</span></div>
+                  <div className="title-line">Questions?</div>
+                  <div className="title-line"><span className="text-highlight">We've got answers.</span></div>
                 </h2>
               </header>
-            </div>
-          </div>
-          <div className="faq-description-col">
-            <div className="faq-description">
-              <span className="description-regular">
-                Have more questions? Feel free to reach out to our support team.
-              </span>
             </div>
           </div>
         </div>
@@ -113,3 +106,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
